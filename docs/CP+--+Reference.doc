@@ -1,0 +1,345 @@
+Date: Thu, 26 Mar 2026 02:42:44 +0000 (UTC)
+Message-ID: <2038341745.29.1774492964774@81ef2ef75f6a>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_28_162707240.1774492964774"
+
+------=_Part_28_162707240.1774492964774
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>CP -- Reference</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>CP -- Reference</h1>
+    <div class=3D"Section1">
+        <p local-id=3D"f1fce992a5ac"><strong>Daftar Referensi Relevan (Mini=
+mal 8) untuk Project Deteksi Tingkat Fokus Siswa Berbasis Computer Vision</=
+strong></p>
+<p local-id=3D"b50db08f6a7a">Berikut adalah <strong>8 referensi</strong> ya=
+ng paling relevan dan terkini dengan project Anda (deteksi fokus siswa tung=
+gal di meja belajar terkendali menggunakan pose estimation/MediaPipe/BlazeP=
+ose, kamera tunggal, dan klasifikasi fokus vs tidak fokus). Semua referensi=
+ telah dipilih karena langsung berkaitan dengan student engagement/attentio=
+n detection, pose estimation, classroom behavior, dataset DAiSEE/SCB, dan p=
+endekatan ringan.</p>
+<ol start=3D"1" local-id=3D"006da2337eea">
+<li local-id=3D"1804e7a78902">
+<p local-id=3D"a59ed5fa6f94"><strong>Automated Detection of Suspicious Beha=
+vior During Online Exams Using Artificial Intelligence and Computer Vision =
+(2025)</strong> <br>
+Ringkasan: Makalah ini mengusulkan sistem otomatis untuk pemantauan ujian d=
+aring menggunakan deteksi wajah, gaze tracking, analisis postur, dan pengen=
+alan objek dengan YOLO untuk mengidentifikasi perilaku curang seperti kehad=
+iran ponsel atau orang lain. <br>
+Link: <a class=3D"external-link" href=3D"https://ceur-ws.org/Vol-4036/Paper=
+10.pdf" rel=3D"nofollow">https://ceur-ws.org/Vol-4036/Paper10.pdf</a></p></=
+li>
+<li local-id=3D"fd3141d4a8bc">
+<p local-id=3D"c67b5ecdc3a7"><strong>SCB-Dataset: A Dataset for Detecting S=
+tudent and Teacher Classroom Behavior (Yang et al., 2023)</strong> <br>
+Ringkasan: Makalah ini memperkenalkan SCB-Dataset, dataset komprehensif ber=
+isi 13.330 gambar dan 122.977 label untuk mendeteksi 19 perilaku siswa di k=
+elas (termasuk reading, writing, using phone) menggunakan computer vision. =
+<br>
+Link: <a class=3D"external-link" data-card-appearance=3D"inline" href=3D"ht=
+tps://arxiv.org/abs/2304.02488" local-id=3D"1d7b69aa6034" rel=3D"nofollow">=
+https://arxiv.org/abs/2304.02488</a></p></li>
+<li local-id=3D"2167efc9b047">
+<p local-id=3D"bd6fc5740165"><strong>Classroom Attention Detection Based on=
+ Computer Vision and Artificial Intelligence (Xue, 2025)</strong> <br>
+Ringkasan: Makalah ini mengusulkan model deteksi perhatian siswa di kelas m=
+enggunakan estimasi gaze point, pengenalan target gaze, dan analisis tingka=
+t perhatian berbasis computer vision serta graph convolutional network. <br=
+>
+Link: <a class=3D"external-link" href=3D"http://scholar-press.com/uploads/p=
+apers/uMwPgKSIt2VzTp6SjRL7DLuyLfXflEdUat2WoqTw.pdf" rel=3D"nofollow">http:/=
+/scholar-press.com/uploads/papers/uMwPgKSIt2VzTp6SjRL7DLuyLfXflEdUat2WoqTw.=
+pdf</a></p></li>
+<li local-id=3D"adc3f5a52af9">
+<p local-id=3D"0ff75602621c"><strong>A Dataset for Assessing Real-Time Atte=
+ntion Levels of the Students in Online Classes (Hossen et al., 2023)</stron=
+g> <br>
+Ringkasan: Makalah ini menyajikan dataset baru untuk mendeteksi tingkat per=
+hatian siswa secara real-time di kelas daring dengan integrasi face detecti=
+on, hand tracking, head pose estimation, dan mobile phone detection. <br>
+Link: <a class=3D"external-link" href=3D"https://www.sciencedirect.com/scie=
+nce/article/pii/S2352340923008387" rel=3D"nofollow">https://www.sciencedire=
+ct.com/science/article/pii/S2352340923008387</a></p></li>
+<li local-id=3D"3e8b659c65f1">
+<p local-id=3D"3bf3c41a1df7"><strong>Detection of Student Focus Level using=
+ Body Posture Analysis with Blazepose (Purba et al., 2025)</strong> <br>
+Ringkasan: Makalah ini mengembangkan sistem pemantauan fokus siswa universi=
+tas secara real-time berdasarkan analisis postur tubuh menggunakan BlazePos=
+e (MediaPipe) pada lingkungan meja belajar. <br>
+Link: <a class=3D"external-link" href=3D"https://ioinformatic.org/index.php=
+/JAIEA/article/download/1373/972" rel=3D"nofollow">https://ioinformatic.org=
+/index.php/JAIEA/article/download/1373/972</a></p></li>
+<li local-id=3D"e7517507331b">
+<p local-id=3D"b3a4713b7f04"><strong>Student=E2=80=99s Engagement Detection=
+ Based on Computer Vision: A Systematic Literature Review (Qarbal et al., 2=
+025)</strong> <br>
+Ringkasan: Makalah ini merupakan tinjauan literatur sistematis tentang tekn=
+ik computer vision untuk deteksi keterlibatan siswa, mencakup dataset (DAiS=
+EE, SCB), fitur pose/gaze, model ML/DL, serta tantangan implementasi. <br>
+Link: <a class=3D"external-link" href=3D"https://ieeexplore.ieee.org/docume=
+nt/11119520" rel=3D"nofollow">https://ieeexplore.ieee.org/document/11119520=
+</a></p></li>
+<li local-id=3D"a6c254f81364">
+<p local-id=3D"ee4cea70e61c"><strong>A General Model for Detecting Learner =
+Engagement: Implementation and Evaluation (Malekshahi et al., 2024)</strong=
+> <br>
+Ringkasan: Makalah ini mengusulkan model umum untuk mendeteksi keterlibatan=
+ pembelajar dengan akurasi 61,3 % pada dataset DAiSEE menggunakan pendekata=
+n computer vision yang ringan dan cocok untuk transfer learning. <br>
+Link: <a class=3D"external-link" href=3D"https://arxiv.org/pdf/2405.04251" =
+rel=3D"nofollow">https://arxiv.org/pdf/2405.04251</a></p></li>
+<li local-id=3D"10e585898bd0">
+<p local-id=3D"55fceb0f638c"><strong>Deep Analysis of Student Body Activiti=
+es to Detect Engagement State in E-Learning Sessions (Khenkar et al., 2023)=
+</strong> <br>
+Ringkasan: Makalah ini mengusulkan model 3D CNN untuk mendeteksi tingkat ke=
+terlibatan siswa berdasarkan aktivitas tubuh pada sesi e-learning, diuji pa=
+da dataset DAiSEE dengan fokus pada pose dan gerakan. <br>
+Link: <a class=3D"external-link" data-card-appearance=3D"inline" href=3D"ht=
+tps://www.mdpi.com/2076-3417/13/4/2591" local-id=3D"678bfdb3d9ee" rel=3D"no=
+follow">https://www.mdpi.com/2076-3417/13/4/2591</a></p></li>
+</ol>
+<p local-id=3D"64766532f421">Referensi di atas sangat cocok untuk digunakan=
+ di bagian Pendahuluan, Metodologi, atau Landasan Teori artikel Anda. Semua=
+nya tersedia secara terbuka (PDF/arXiv/IEEE), sehingga Anda dapat langsung =
+membaca dan mencocokkan isinya.</p>
+<p local-id=3D"96fdb57d578c">Jika Anda ingin:</p>
+<ul local-id=3D"143799118bc0">
+<li local-id=3D"5f603bd8b871">
+<p local-id=3D"ad4546c5f2c4">Tambahan 2=E2=80=933 referensi lagi,</p></li>
+<li local-id=3D"6870138a79d8">
+<p local-id=3D"4cec7f799c2b">Versi lengkap Daftar Pustaka dalam format IEEE=
+,</p></li>
+<li local-id=3D"2dde9f352338">
+<p local-id=3D"c9f1e969fdda">Atau integrasi langsung ke bagian Pendahuluan =
+yang sudah kita buat,</p></li>
+</ul>
+<p local-id=3D"0455877ebaa2">silakan beri tahu saya. Kita bisa lanjut ke ba=
+gian Metodologi atau hasil yang diharapkan setelah ini.</p>
+    </div>
+</body>
+</html>
+------=_Part_28_162707240.1774492964774--

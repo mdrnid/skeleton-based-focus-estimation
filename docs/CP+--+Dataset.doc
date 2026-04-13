@@ -1,0 +1,476 @@
+Date: Thu, 26 Mar 2026 02:42:20 +0000 (UTC)
+Message-ID: <1141310520.27.1774492940633@81ef2ef75f6a>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_26_427856811.1774492940633"
+
+------=_Part_26_427856811.1774492940633
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>CP -- Dataset</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>CP -- Dataset</h1>
+    <div class=3D"Section1">
+        <p local-id=3D"ec2e4daa21d1">Berikut adalah analisis dan rekomendas=
+i saya sebagai asisten researcher di bidang Computer Vision mengenai <stron=
+g>strategi pemilihan dataset</strong> untuk project deteksi tingkat fokus s=
+iswa (single-user, controlled environment, kamera tunggal).</p>
+<h3 local-id=3D"24d58330235d" id=3D"CP--Dataset-1.MengapaDatasetVideo(Bukan=
+CitraStatis)danJenisyangDibutuhkan">1. Mengapa Dataset Video (Bukan Citra S=
+tatis) dan Jenis yang Dibutuhkan</h3>
+<p local-id=3D"e89961c4f14a">Dataset yang ideal harus berupa <strong>video<=
+/strong> karena perilaku fokus/tidak fokus bersifat temporal (melibatkan ge=
+rakan sepanjang waktu). Citra tunggal tidak cukup untuk membedakan durasi p=
+erilaku (misalnya menoleh 2 detik vs. 10 detik) atau menghitung persentase =
+fokus per sesi 30 menit.</p>
+<p local-id=3D"235f803e4853"><strong>Spesifikasi dataset utama yang dibutuh=
+kan</strong> (custom/primary dataset Anda):</p>
+<ul local-id=3D"cc396d4e-b391-405d-86bb-49a239110a38">
+<li local-id=3D"3395d548-cb7b-44c0-ac8b-6ead81a7550e">
+<p local-id=3D"ab97621b4310"><strong>Format</strong>: Video full-HD atau 72=
+0p, 30 fps, durasi per rekaman 30 menit (sesuai target metrik Anda) atau cl=
+ip pendek 5=E2=80=9330 detik untuk training.</p></li>
+<li local-id=3D"7490aed3-de68-44f7-913a-479a92a360ae">
+<p local-id=3D"93ce44a60109"><strong>Konten per video</strong>: Satu siswa =
+di meja belajar standar, kamera tunggal (frontal atau sudut 30=E2=80=9345=
+=C2=B0), mencakup seluruh tubuh atas + tangan + layar/HP/buku.</p></li>
+<li local-id=3D"924f8c48-2fd9-4c50-8b03-a5cfbce3ab59">
+<p local-id=3D"bf3cf42c7aa5"><strong>Label yang diperlukan</strong>:</p>
+<ul local-id=3D"ba32af11-adf9-4461-a4fb-236b074fff59">
+<li local-id=3D"9d08878c-3b91-4db1-83b6-9c4c2604793c">
+<p local-id=3D"bbd65c1c0f1e">Binary utama: <strong>Fokus</strong> vs <stron=
+g>Tidak Fokus</strong>.</p></li>
+<li local-id=3D"29885d47-ce71-496c-9c49-ef6e3d594213">
+<p local-id=3D"6a4d8156ef58">Sub-label (opsional tapi sangat direkomendasik=
+an): melihat layar, menulis, membaca, menggunakan HP, makan/minum, menoleh,=
+ istirahat.</p></li>
+<li local-id=3D"e23a4f3e-0d1e-4938-9a48-70ca983d7946">
+<p local-id=3D"fdcbbf50fa01">Temporal annotation: waktu mulai=E2=80=93seles=
+ai setiap perilaku + durasi minimum (misalnya &gt;3 detik untuk tidak fokus=
+).</p></li>
+</ul></li>
+<li local-id=3D"d148cb3e-fdb0-4088-ad40-0893f5b0ecd0">
+<p local-id=3D"76afd93734be"><strong>Variasi yang wajib ada</strong> (untuk=
+ mencapai generalisasi dan akurasi =E2=89=A585 %):</p>
+<ul local-id=3D"2fa7edd8-1873-454a-b6ef-0869d900b954">
+<li local-id=3D"95a212c0-2658-406b-a642-f3db959cbb1a">
+<p local-id=3D"9eaf6a8ad277">10=E2=80=9320 siswa berbeda (beragam usia, gen=
+der, etnis jika mungkin).</p></li>
+<li local-id=3D"6d6367c7-82b2-4313-a981-ec880a87bbae">
+<p local-id=3D"8196859cc377">Pencahayaan: terang, sedang, agak gelap.</p></=
+li>
+<li local-id=3D"deee0261-cabc-4131-894a-22f7e7d7dffc">
+<p local-id=3D"38f4a4f18e2c">Posisi duduk dan jarak kamera sedikit bervaria=
+si.</p></li>
+<li local-id=3D"c86ae861-38a1-4200-8d5a-5d94a0ad8c13">
+<p local-id=3D"e8929b93bd55">Jenis aktivitas belajar: membaca buku, menulis=
+ catatan, belajar di laptop.</p></li>
+<li local-id=3D"c2868c1f-d58a-4d6d-b5b0-51ce6c02cae5">
+<p local-id=3D"105af9347efa">Durasi total: minimal 15=E2=80=9330 jam video =
+(setara 30=E2=80=9360 sesi =C3=97 30 menit).</p></li>
+</ul></li>
+</ul>
+<p local-id=3D"48eeab0d8774">Estimasi jumlah data minimum untuk akurasi tar=
+get 85 % (berdasarkan pengalaman project serupa):</p>
+<ul local-id=3D"f5393425-9c41-4907-bd87-ce598cd42a63">
+<li local-id=3D"8fbae144-64c1-4db7-9988-cdcdc713b9e9">
+<p local-id=3D"b61a0b7e54b6">2.000=E2=80=935.000 clip berlabel (1.000=E2=80=
+=932.500 per kelas Fokus/Tidak Fokus).</p></li>
+<li local-id=3D"da5984ca-3270-4f18-8bd1-0552e1539b12">
+<p local-id=3D"a5f690d7e0c1">Atau 20=E2=80=9340 sesi full 30 menit dengan a=
+notasi frame-level/clip-level.</p></li>
+</ul>
+<h3 local-id=3D"ccaede5f9c08" id=3D"CP--Dataset-2.StrategiPemilihanDataset(=
+Step-by-Step)">2. Strategi Pemilihan Dataset (Step-by-Step)</h3>
+<p local-id=3D"30587a26d161">Strategi yang saya rekomendasikan adalah <stro=
+ng>hybrid</strong> (custom primer + public dataset sebagai suplemen). Ini a=
+dalah pendekatan paling efisien dan realistis untuk project Anda:</p>
+<p local-id=3D"7898d477e744"><strong>Langkah 1 =E2=80=93 Custom Primary Dat=
+aset (80=E2=80=9390 % bobot training)</strong> Anda sudah menyatakan akan m=
+engumpulkan sendiri =E2=86=92 ini adalah inti project. Keunggulan: sangat s=
+esuai dengan controlled environment Anda (meja belajar, kamera tunggal, def=
+inisi perilaku spesifik). Protokol singkat yang saya sarankan:</p>
+<ul local-id=3D"44497389-65d8-4530-8743-47dd7ffea88b">
+<li local-id=3D"3b1c7940-b51b-4d46-b118-c6dc77daed91">
+<p local-id=3D"bd946b466b84">Rekam dengan consent tertulis.</p></li>
+<li local-id=3D"b9e1b5ac-6e80-4217-abb4-d5c89a81ca05">
+<p local-id=3D"911d21e9a261">Gunakan software OBS Studio atau webcam native=
+.</p></li>
+<li local-id=3D"46aeea25-aef4-4787-a825-60ab666d526b">
+<p local-id=3D"5b681601d26a">Rekam 2=E2=80=933 sesi per siswa (total 30=E2=
+=80=9360 menit per orang).</p></li>
+<li local-id=3D"e2e808bd-d1d2-49f2-ad9f-d4e7043b2ca4">
+<p local-id=3D"3c2da9e25d13">Variasikan waktu (pagi/siang) dan jenis materi=
+.</p></li>
+</ul>
+<p local-id=3D"7006c7a2503c"><strong>Langkah 2 =E2=80=93 Data Augmentation =
+&amp; Balancing</strong> Gunakan teknik: flipping, brightness adjustment, t=
+emporal cropping, synthetic noise (untuk simulasi pencahayaan berbeda).</p>
+<h3 local-id=3D"137d4d864e58" id=3D"CP--Dataset-3.ToolsuntukLabelingdanMana=
+jemenDataset">3. Tools untuk Labeling dan Manajemen Dataset</h3>
+<ul local-id=3D"40d917e4-fcc8-43e7-a789-faeaae770e14">
+<li local-id=3D"87adcbc0-d1b0-4dd4-afc6-c4472e71e6ea">
+<p local-id=3D"2d4fddffd8d8">Labeling video: <strong>CVAT</strong> (gratis,=
+ support temporal annotation) atau <strong>LabelStudio</strong>.</p></li>
+<li local-id=3D"50a01f5d-64b6-42a4-af1f-166dbcc2aeaf">
+<p local-id=3D"ac0636b4941f">Semi-automatic: Gunakan MediaPipe Pose/Gaze te=
+rlebih dahulu untuk pre-label, lalu manual correction.</p></li>
+<li local-id=3D"079608c6-4487-4409-bc35-091a4393e813">
+<p local-id=3D"cf4bdc42a24e">Manajemen: Roboflow atau FiftyOne (untuk versi=
+oning dan split train/val/test 70:15:15).</p></li>
+</ul>
+<h3 local-id=3D"5ab4f83ade0b" id=3D"CP--Dataset-4.RisikodanMitigasi">4. Ris=
+iko dan Mitigasi</h3>
+<ul local-id=3D"2019dfbc-f79b-43b6-898e-87c7cf60c3c1">
+<li local-id=3D"132d8279-ed8b-421e-b10a-9dc4e6c3cac9">
+<p local-id=3D"3026afe4b4db">Overfitting pada siswa tertentu =E2=86=92 solu=
+si: cross-subject validation (test pada siswa yang tidak pernah dilihat saa=
+t training).</p></li>
+<li local-id=3D"a0834607-fc9c-4c3b-8e42-04766a5732a8">
+<p local-id=3D"fa67c84ed4d7">Ketidakseimbangan kelas (fokus lebih banyak da=
+ripada tidak fokus) =E2=86=92 gunakan weighted loss atau oversampling clip =
+tidak fokus.</p></li>
+</ul>
+<p local-id=3D"f63264fff3ab">Dengan strategi ini, target akurasi 85 % + F1-=
+score yang baik sangat achievable dalam 2=E2=80=933 bulan pengumpulan dan t=
+raining awal.</p>
+<p local-id=3D"b41605540c11">Apakah Anda ingin saya lanjutkan dengan:</p>
+<ul local-id=3D"bc86bb24-3a03-444a-8a60-833f587657b1">
+<li local-id=3D"c98dd89e-747f-4cf5-99b3-b7e7f1b46f2f">
+<p local-id=3D"5267d3be19db">Rancangan protokol pengumpulan data lengkap (t=
+emplate rekaman + checklist consent)?</p></li>
+<li local-id=3D"80c34134-33c8-4882-9eac-156aae047ff2">
+<p local-id=3D"40d7956a4833">Detail cara download dan menggunakan DAiSEE + =
+SCB-Dataset (link resmi + cara split)?</p></li>
+<li local-id=3D"30a95b0e-2665-452c-abb0-2141fe573cea">
+<p local-id=3D"e8b0e107398b">Outline arsitektur model yang paling cocok den=
+gan dataset ini (misalnya YOLO + LSTM atau Transformer-based)?</p></li>
+</ul>
+<p local-id=3D"e99d111eda32">Silakan beri tahu langkah mana yang ingin kita=
+ bahas selanjutnya agar brainstorming ini terus maju secara sistematis. Say=
+a siap mendukung hingga dataset Anda benar-benar siap untuk training.</p>
+<hr local-id=3D"b05d37aff98e">
+<h3 local-id=3D"501ac5148af6" id=3D"CP--Dataset-1.DurasiVideoyangDiperlukan=
+untukDataset">1. Durasi Video yang Diperlukan untuk Dataset</h3>
+<p local-id=3D"f60b15601c97"><strong>Tidak perlu</strong> merekam atau meny=
+impan video full 15 menit per sesi sebagai unit data training utama.</p>
+<p local-id=3D"897045e22a2f">Strategi yang paling efisien dan ramah resourc=
+e adalah:</p>
+<ul local-id=3D"cbac755c-cf82-451f-ba23-bfffae14ee4e">
+<li local-id=3D"83d9a86f-668b-4a76-9618-e2bbc8626778">
+<p local-id=3D"af986a68de76"><strong>Clip pendek per tindakan</strong> (5=
+=E2=80=9330 detik per clip) sebagai unit training. Contoh: =E2=80=93 1 clip=
+ 10 detik =E2=80=9Cmelihat layar=E2=80=9D (fokus) =E2=80=93 1 clip 15 detik=
+ =E2=80=9Cmenulis=E2=80=9D (fokus) =E2=80=93 1 clip 8 detik =E2=80=9Cmenggu=
+nakan HP=E2=80=9D (tidak fokus) =E2=80=93 dst.</p>
+<p local-id=3D"89496bae5e12">Dengan cara ini, Anda hanya perlu merekam sesi=
+ panjang (10=E2=80=9315 menit atau 30 menit) sekali untuk pengumpulan, lalu=
+ langsung memotongnya menjadi ratusan clip pendek.</p></li>
+<li local-id=3D"010e598e-a204-43ce-8c2f-902e3692361d">
+<p local-id=3D"c8a08ca32daa"><strong>Video 10 menit untuk validasi/test</st=
+rong>: Sangat tepat. Gunakan 1=E2=80=932 video full 10 menit per siswa (den=
+gan campuran semua gerakan) hanya untuk evaluasi akhir dan perhitungan pers=
+entase fokus. Ini tidak ikut dalam proses training.</p></li>
+</ul>
+<p local-id=3D"8355a2d89fd0"><strong>Estimasi jumlah data minimum yang real=
+istis</strong> (untuk akurasi target 85 % dengan resource terbatas):</p>
+<ul local-id=3D"67d42092-6748-4ddc-bcb9-c02158695904">
+<li local-id=3D"57f23a21-3d74-41b3-b631-fe03daab9cec">
+<p local-id=3D"1a8e8340c092">800=E2=80=931.500 clip pendek (400=E2=80=93750=
+ per kelas Fokus/Tidak Fokus).</p></li>
+<li local-id=3D"468dddf9-7d6b-412b-947e-cdff8c45241b">
+<p local-id=3D"a42c68e25845">Total ukuran dataset: hanya 5=E2=80=9315 GB (b=
+ukan ratusan GB), sangat manageable bahkan di laptop biasa.</p></li>
+</ul>
+<h3 local-id=3D"ab42baa40676" id=3D"CP--Dataset-2.ApakahDatasetVideoAkanMem=
+beratkanProsesTraining?">2. Apakah Dataset Video Akan Memberatkan Proses Tr=
+aining?</h3>
+<p local-id=3D"4b933ff0f2bc">Ya, dataset video memang lebih berat daripada =
+citra, tetapi <strong>dapat dikendalikan sepenuhnya</strong> dengan strateg=
+i di atas. Dengan clip pendek + jumlah data sedang (bukan ribuan jam), beba=
+n training menjadi ringan. Banyak penelitian serupa (Student Engagement Det=
+ection) berhasil mencapai 85=E2=80=9390 % akurasi dengan hanya 10=E2=80=932=
+0 GB data video clip.</p>
+<h3 local-id=3D"f963152c626d" id=3D"CP--Dataset-3.RekomendasiModelyangPalin=
+gCocokuntukResourceTerbatasAnda">3. Rekomendasi Model yang Paling Cocok unt=
+uk Resource Terbatas Anda</h3>
+<p local-id=3D"c1f9e2cdbbc8">Kita tidak akan menggunakan model berat yang m=
+emerlukan GPU high-end. Berikut urutan rekomendasi saya (dari yang paling r=
+ingan):</p>
+<p local-id=3D"1685b85bb3f9"><strong>Pilihan Utama (Paling Direkomendasikan=
+ untuk Anda):</strong></p>
+<ul local-id=3D"97b08b18-012e-4c6f-b578-2474f8adb8c2">
+<li local-id=3D"ed1a2aac-9c97-40d9-8cdf-49273e71df55">
+<p local-id=3D"6f6ede8de4b5"><strong>MediaPipe Pose + Lightweight Classifie=
+r</strong> =E2=80=93 MediaPipe (Google) sangat ringan, berjalan di CPU bias=
+a (bahkan tanpa GPU). =E2=80=93 Deteksi 33 landmark tubuh + tangan + wajah =
+secara real-time. =E2=80=93 Tambahkan classifier sederhana (MLP atau LSTM k=
+ecil) di atas output pose untuk klasifikasi fokus/tidak fokus. =E2=80=93 Ke=
+unggulan: training sangat cepat (bisa di laptop 8 GB RAM), akurasi 80=E2=80=
+=9388 % dengan data Anda, hampir zero cost hardware. =E2=80=93 Cocok sekali=
+ untuk controlled environment (meja belajar frontal).</p></li>
+</ul>
+<p local-id=3D"eb809168c2b7"><strong>Pilihan Alternatif Kedua (Jika ingin a=
+kurasi lebih tinggi):</strong></p>
+<ul local-id=3D"19bc3cf2-c27b-4d5b-8e78-27d79456ca32">
+<li local-id=3D"e435a090-bf01-4d7a-86c2-9a9f42d059e5">
+<p local-id=3D"7effe95fb60f"><strong>YOLOv8n (Nano version) + Temporal Modu=
+le</strong> =E2=80=93 YOLOv8n adalah model detection terkecil dan tercepat =
+(bisa di CPU). =E2=80=93 Deteksi objek (layar, HP, buku, tangan) + pose. =
+=E2=80=93 Tambahkan LSTM atau Transformer kecil untuk menangkap urutan gera=
+kan. =E2=80=93 Training bisa dilakukan di Google Colab (free T4 GPU) tanpa =
+membebani laptop Anda.</p></li>
+</ul>
+<p local-id=3D"ca387521dfcb"><strong>Pilihan yang Tidak Direkomendasikan Sa=
+at Ini:</strong></p>
+<ul local-id=3D"895e8b16-b3b4-411b-a084-5f444fc1a1b1">
+<li local-id=3D"43582bca-eb68-4983-a342-1616b591794b">
+<p local-id=3D"e8018fa34b25">CNN 3D murni (C3D, SlowFast) atau Transformer =
+video besar (TimeSformer, VideoMAE) =E2=86=92 terlalu berat untuk resource =
+Anda.</p></li>
+<li local-id=3D"701379b6-26b0-4be9-b45d-a97db49a71ca">
+<p local-id=3D"ae734c0179fd">Training dari nol tanpa pre-trained =E2=86=92 =
+sangat lambat dan boros resource.</p></li>
+</ul>
+<p local-id=3D"7b4c2da27086"><strong>Strategi Training yang Ramah Resource:=
+</strong></p>
+<ul local-id=3D"06e0a473-b579-4282-9154-c3b9a6c54cf3">
+<li local-id=3D"08a06a19-171d-4bb4-9063-e6695554dad4">
+<p local-id=3D"7be2e8565142">Gunakan <strong>transfer learning</strong>: am=
+bil model MediaPipe atau YOLOv8 yang sudah pre-trained di DAiSEE/SCB-Datase=
+t, lalu fine-tune hanya classifier terakhir dengan data custom Anda.</p></l=
+i>
+<li local-id=3D"d1a64f56-fee8-478f-bad0-3ea8480af6b1">
+<p local-id=3D"3105c3c478a3">Training dilakukan di <strong>Google Colab</st=
+rong> (gratis 12 jam GPU/hari) atau Kaggle Notebook. Laptop Anda hanya dipa=
+kai untuk labeling dan preprocessing.</p></li>
+<li local-id=3D"91b5fec4-2e20-4ced-a765-7bc6b1d17761">
+<p local-id=3D"5ada1199a513">Teknik efisiensi: batch size kecil (4=E2=80=93=
+8), mixed precision (float16), gradient accumulation.</p></li>
+</ul>
+<p local-id=3D"eff512c8646e">Dengan pendekatan ini, Anda bisa menyelesaikan=
+ training awal dalam 1=E2=80=932 hari di Colab, tanpa membeli hardware tamb=
+ahan.</p>
+    </div>
+</body>
+</html>
+------=_Part_26_427856811.1774492940633--

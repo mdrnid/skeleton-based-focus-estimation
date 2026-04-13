@@ -1,0 +1,448 @@
+Date: Thu, 26 Mar 2026 02:41:57 +0000 (UTC)
+Message-ID: <32331421.5.1774492917271@868be3e1ab0f>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_4_378747992.1774492917270"
+
+------=_Part_4_378747992.1774492917270
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>A -- Overview</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font: var(--ds-font-body-small, Arial, Helvetica, FreeSans, sans-se=
+rif);
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: var(--ds-surface, #fff) !important;
+        color: var(--ds-text, #000) !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: var(--ds-text, #000);
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        page-break-after: avoid;
+    }
+
+    pre {
+        font: var(--ds-font-code, Monaco, "Courier New", monospace);
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>A -- Overview</h1>
+    <div class=3D"Section1">
+        <p local-id=3D"9df9a01e28bd"><strong>Draft Awal Artikel Ilmiah</str=
+ong></p>
+<h3 local-id=3D"d933008a7b15" id=3D"A--Overview-1.Judul">1. Judul</h3>
+<p local-id=3D"2d6a8286c9b4"><strong>Deteksi Tingkat Fokus Siswa Saat Belaj=
+ar Menggunakan Computer Vision Berbasis Pose Estimation pada Lingkungan Ter=
+kendali</strong></p>
+<h3 local-id=3D"662d79db7967" id=3D"A--Overview-2.PenjelasanAwalProject(Abs=
+trakSingkat)">2. Penjelasan Awal Project (Abstrak Singkat)</h3>
+<p local-id=3D"8ef6cb9c915b">Penelitian ini mengembangkan sistem deteksi ti=
+ngkat fokus siswa saat belajar berbasis computer vision dengan menggunakan =
+kamera tunggal. Sistem mengklasifikasikan perilaku siswa menjadi dua katego=
+ri utama, yaitu fokus (melihat layar, menulis, dan membaca materi) serta ti=
+dak fokus (menggunakan ponsel, makan/minum, menoleh, dan istirahat). Pendek=
+atan utama memanfaatkan pose estimation untuk mengekstrak landmark tubuh, k=
+epala, dan tangan, diikuti klasifikasi temporal sederhana. Dataset primer b=
+erupa video clip pendek dikombinasikan dengan dataset publik untuk pelatiha=
+n model yang ringan dan sesuai dengan keterbatasan sumber daya komputasi. H=
+asil yang diharapkan berupa akurasi deteksi minimal 85 % serta pengukuran p=
+ersentase fokus per sesi 30 menit, sehingga memberikan solusi objektif dan =
+non-intrusif bagi pemantauan pembelajaran mandiri.</p>
+<h3 local-id=3D"316eb141c723" id=3D"A--Overview-3.Permasalahan">3. Permasal=
+ahan</h3>
+<p local-id=3D"42dde7b5f7b7"><strong>Masalah yang ingin diselesaikan</stron=
+g> <br>
+Observasi tingkat fokus siswa selama proses belajar masih dilakukan secara =
+manual oleh guru atau orang tua, yang bersifat subjektif, tidak konsisten, =
+dan tidak mampu mencakup durasi perilaku secara tepat. Pada pembelajaran ma=
+ndiri atau daring, sulit untuk mendeteksi kapan siswa kehilangan fokus (mis=
+alnya beralih ke ponsel atau menoleh lama) tanpa pengawasan langsung.</p>
+<p local-id=3D"b3667bfd1850"><strong>Mengapa masalah ini penting</strong> <=
+br>
+Tingkat fokus siswa berkorelasi langsung dengan hasil belajar, retensi peng=
+etahuan, dan tingkat kelulusan. Sistem deteksi otomatis berbasis computer v=
+ision dapat memberikan feedback real-time dan laporan objektif, sehingga me=
+mbantu guru atau orang tua melakukan intervensi dini serta meningkatkan efi=
+siensi pembelajaran di era digital.</p>
+<h3 local-id=3D"103d6edb0b4c" id=3D"A--Overview-4.JenisData">4. Jenis Data<=
+/h3>
+<p local-id=3D"52579e0d0c1f"><strong>Jenis data yang dibutuhkan</strong> Da=
+ta utama yang akan digunakan adalah <strong>video rekaman</strong> dari kam=
+era tunggal (webcam atau kamera eksternal) yang ditempatkan di depan meja b=
+elajar siswa. Lingkungan sepenuhnya terkendali (meja belajar standar, penca=
+hayaan dapat diatur, tidak ada gangguan latar belakang). Video direkam dala=
+m format 720p atau Full HD dengan frame rate 30 fps.</p>
+<p local-id=3D"0ade5c1427dc">Untuk keperluan pelatihan, video tersebut dipo=
+tong menjadi <strong>clip pendek berdurasi 5=E2=80=9330 detik</strong> (sat=
+u clip =3D satu tindakan utama). Untuk validasi dan pengujian, digunakan vi=
+deo penuh berdurasi <strong>10=E2=80=9330 menit</strong> per sesi (untuk me=
+nghitung persentase fokus secara akurat).</p>
+<p local-id=3D"35af375c6f80"><strong>Pola yang ingin dikenali</strong> Kita=
+ mendefinisikan dua kelas utama secara jelas dan operasional:</p>
+<ul local-id=3D"4a8ccb94-f3d1-4cc5-b275-6bcb873eaa0d">
+<li local-id=3D"36e685c8-f08f-4bfe-9a40-dbffcbee6c72">
+<p local-id=3D"637bf080c0a8"><strong>Fokus</strong> (engaged learning behav=
+ior): =E2=80=93 Melihat layar (kepala menghadap laptop/monitor, gaze ke dep=
+an). =E2=80=93 Menulis (gerakan tangan aktif menulis di kertas atau tablet)=
+. =E2=80=93 Membaca materi (kepala tertunduk ke buku/modul, tangan memegang=
+ atau membalik halaman).</p></li>
+<li local-id=3D"6cce3e6b-e8c2-4cea-9dde-5fed825b84ff">
+<p local-id=3D"fac1ec55fb36"><strong>Tidak fokus</strong> (disengaged behav=
+ior): =E2=80=93 Menggunakan HP (tangan memegang ponsel, kepala menunduk ke =
+arah layar ponsel). =E2=80=93 Makan/minum (tangan membawa makanan/minuman k=
+e mulut). =E2=80=93 Menoleh ke tempat lain (kepala berputar ke samping atau=
+ ke belakang &gt; 3 detik). =E2=80=93 Istirahat (postur tubuh santai, tanga=
+n diam, kepala tidak mengarah ke materi/layar).</p></li>
+</ul>
+<p local-id=3D"4858e2e8ab66">Definisi ini bersifat <strong>temporal</strong=
+> (berdasarkan durasi dan urutan gerakan), sehingga memerlukan analisis vid=
+eo bukan citra statis.</p>
+<p local-id=3D"1d66d6f03b5d"><strong>Bagaimana pelabelannya</strong> Pelabe=
+lan dilakukan secara <strong>temporal annotation</strong> (bukan hanya fram=
+e tunggal):</p>
+<ul local-id=3D"b3a645ce-8add-4ed2-a8c2-54182a51f3cb">
+<li local-id=3D"b1417f61-98c1-43bb-b1c7-bfe0b7a616b8">
+<p local-id=3D"24836efcd4b4">Setiap clip pendek diberi label binary: <stron=
+g>Fokus</strong> atau <strong>Tidak Fokus</strong>.</p></li>
+<li local-id=3D"48836276-a4b8-4b60-9598-7d904b854e75">
+<p local-id=3D"0366f7f053ea">Sub-label perilaku juga dicatat (misalnya =E2=
+=80=9Cmelihat layar=E2=80=9D atau =E2=80=9Cmenggunakan HP=E2=80=9D) untuk a=
+nalisis lebih dalam.</p></li>
+<li local-id=3D"16185270-4a82-4396-9a1c-af0ce5ed73d8">
+<p local-id=3D"2fb0d77c01e9">Durasi minimum: perilaku dianggap valid jika b=
+erlangsung minimal 3 detik (untuk menghindari gerakan sesaat).</p></li>
+<li local-id=3D"b68e0afe-ab2b-42ad-812c-fc835009753e">
+<p local-id=3D"8f4caf7abc0c">Proses pelabelan menggunakan tools gratis sepe=
+rti <strong>CVAT</strong> atau <strong>LabelStudio</strong>, dengan dua ora=
+ng labeler untuk menghitung inter-rater agreement (target Kappa &gt; 0.8).<=
+/p></li>
+<li local-id=3D"62ffb356-315e-450e-8d4b-e0e68c742d94">
+<p local-id=3D"45ce03347d84">Dataset primer akan dikumpulkan sendiri (denga=
+n informed consent), sedangkan dataset pendukung diambil dari sumber publik=
+ untuk transfer learning.</p></li>
+</ul>
+<p local-id=3D"7d9823dc6118"><strong>Perkiraan jumlah &amp; karakteristik d=
+ataset</strong></p>
+<ul local-id=3D"1f6a5a4e-c166-49a8-8d94-9b16b7bf4920">
+<li local-id=3D"3af4bd4b-cbe4-4db6-bab8-91f8732fb9c3">
+<p local-id=3D"bd249acb8418">Dataset primer: 800=E2=80=931.500 clip pendek =
+(sekitar 400=E2=80=93750 clip per kelas) dari 10=E2=80=9320 siswa berbeda, =
+dengan variasi pencahayaan (terang/sedang) dan posisi duduk ringan.</p></li=
+>
+<li local-id=3D"092d62c7-3bfb-4e88-b58a-bdf9234e2673">
+<p local-id=3D"fb5d7907eb4d">Dataset pendukung: =E2=80=93 <strong>DAiSEE</s=
+trong> (9.068 video snippet dari 112 siswa) untuk pre-training engagement l=
+evel. =E2=80=93 <strong>SCB-Dataset</strong> (puluhan ribu gambar dan label=
+ perilaku kelas, termasuk reading, writing, using phone) untuk fine-tuning =
+pose dan interaksi objek.</p></li>
+<li local-id=3D"ba4617f4-5c48-48c3-9749-cb9474c6cf28">
+<p local-id=3D"b31ba9390782">Total ukuran: 5=E2=80=9315 GB. Pembagian: 70 %=
+ train, 15 % validation, 15 % test (cross-subject validation agar model tid=
+ak overfitting pada satu siswa).</p></li>
+</ul>
+<h3 local-id=3D"a60a1998c9dd" id=3D"A--Overview-MetodeUtamayangAkanKitaGuna=
+kan">Metode Utama yang Akan Kita Gunakan</h3>
+<p local-id=3D"c950eaf35b75">Kita akan menggunakan <strong>pendekatan pose-=
+based recognition</strong> yang ringan dan efisien. Metode inti adalah <str=
+ong>MediaPipe Pose (BlazePose)</strong> sebagai ekstraktor fitur, dikombina=
+sikan dengan <strong>classifier temporal sederhana</strong> (MLP atau LSTM =
+kecil).</p>
+<p local-id=3D"0bcc87cb1868">Alasan pemilihan:</p>
+<ul local-id=3D"b5503683-4aee-477a-8f8e-3d76f53b088d">
+<li local-id=3D"e815cc1a-e2f0-4e97-882f-6ae00f58cd0d">
+<p local-id=3D"492f33d11c96">MediaPipe sangat ringan (bisa berjalan di CPU =
+biasa tanpa GPU mahal).</p></li>
+<li local-id=3D"e2dc73bd-07bd-43e7-87c3-237c15e71121">
+<p local-id=3D"f4d9c133c234">Cocok untuk lingkungan controlled dan single-u=
+ser.</p></li>
+<li local-id=3D"33e66fcb-0e41-41ce-a83a-7f711a763a98">
+<p local-id=3D"f67af5833bc5">Telah terbukti efektif pada dataset serupa (DA=
+iSEE dan SCB-Dataset).</p></li>
+<li local-id=3D"93a685d0-5f44-43e4-83b7-c65a0e5df424">
+<p local-id=3D"87241e34aea5">Tidak memerlukan model deep learning berat sep=
+erti 3D-CNN atau Vision Transformer.</p></li>
+</ul>
+<h3 local-id=3D"15cace64ea61" id=3D"A--Overview-5.Arsitektur/AlurSistemCOMV=
+IS">5. Arsitektur / Alur Sistem COMVIS</h3>
+<p local-id=3D"3dd24e254be1">Alur sistem dirancang modular, ringan, dan sep=
+enuhnya berbasis pose estimation. Berikut penjelasan tiap tahap secara rinc=
+i:</p>
+<ol start=3D"1" local-id=3D"70277c6d-7aa2-4285-863b-c797ba62eac0">
+<li local-id=3D"d98f22b8-0116-4587-b2f3-92c52aff0aa5">
+<p local-id=3D"7222a268e586"><strong>Akuisisi Data</strong> Kamera tunggal =
+merekam video siswa secara kontinu (30 fps, resolusi 720p/Full HD). Tidak a=
+da sensor tambahan.</p></li>
+<li local-id=3D"647ae2ba-c60a-4213-8e8c-d508f2605f8b">
+<p local-id=3D"5ecaa1438f4d"><strong>Preprocessing</strong></p>
+<ul local-id=3D"a388ef43-dff6-483a-a81e-bb8cfbfcc9b7">
+<li local-id=3D"db5929bb-fe5b-4f5a-93ba-a7d602c2b156">
+<p local-id=3D"c221853e9a4a">Normalisasi pencahayaan (histogram equalizatio=
+n).</p></li>
+<li local-id=3D"4849fe28-58ab-47af-9e24-dc2c2dd15a1a">
+<p local-id=3D"295479b25dc2">Deteksi dan cropping area siswa (menggunakan M=
+ediaPipe agar fokus hanya pada tubuh).</p></li>
+<li local-id=3D"7c7ec1ce-bd2f-48a5-a2f4-3d5913bd9b40">
+<p local-id=3D"fc50705cfb3e">Pemotongan video menjadi clip pendek 5=E2=80=
+=9330 detik berdasarkan perubahan perilaku.</p></li>
+</ul></li>
+<li local-id=3D"88a45a81-bfb7-491b-b981-205bf373677e">
+<p local-id=3D"a33bc19e55c5"><strong>Ekstraksi Fitur (Metode Inti: MediaPip=
+e Pose)</strong> MediaPipe Pose mendeteksi <strong>33 landmark tubuh</stron=
+g> secara real-time pada setiap frame, meliputi:</p>
+<ul local-id=3D"fd809e59-a239-4709-a0d9-35f5c524d61a">
+<li local-id=3D"d98fd694-1743-4bc3-af70-855bc2f48fde">
+<p local-id=3D"7b3c568202d0">11 landmark kepala dan wajah =E2=86=92 untuk h=
+ead-pose estimation (arah pandangan).</p></li>
+<li local-id=3D"2fb3051b-18b7-4b1a-a4e8-044f458e076e">
+<p local-id=3D"d3fb6ab95b3c">21 landmark tangan =E2=86=92 untuk deteksi int=
+eraksi (tangan menulis, memegang HP, atau makan).</p></li>
+<li local-id=3D"ef3c1b7e-6355-49ee-9403-fff0a304708e">
+<p local-id=3D"ce8c9d4049df">Landmark bahu dan pinggang =E2=86=92 untuk pos=
+tur tubuh (santai atau aktif). Output: koordinat (x, y, z) + confidence sco=
+re per landmark. Fitur tambahan: sudut kepala, kecepatan gerakan tangan, da=
+n posisi relatif terhadap objek (layar/HP).</p></li>
+</ul></li>
+<li local-id=3D"39934640-eb2d-4bea-bdbf-007fa06273c7">
+<p local-id=3D"2bc8ba198627"><strong>Klasifikasi Temporal (Metode: MLP atau=
+ LSTM Ringan)</strong> Sequence landmark dari beberapa frame (5=E2=80=9330 =
+detik) dimasukkan ke dalam classifier sederhana:</p>
+<ul local-id=3D"5f797c9b-642c-423f-bc83-47fd7a9efb02">
+<li local-id=3D"c6cfcaf3-fc11-4ecd-8831-3d21fbc3bb45">
+<p local-id=3D"0d579038cf47">MLP (Multi-Layer Perceptron) untuk klasifikasi=
+ cepat jika urutan tidak terlalu kompleks.</p></li>
+<li local-id=3D"91b848c4-46e0-4838-b15d-21e6d6a385a2">
+<p local-id=3D"179b3a399b9d">LSTM kecil (1=E2=80=932 layer) jika diperlukan=
+ untuk menangkap urutan waktu (misalnya membedakan =E2=80=9Cmenoleh sebenta=
+r=E2=80=9D vs. =E2=80=9Cistirahat lama=E2=80=9D). Output per clip: probabil=
+itas Fokus / Tidak Fokus.</p></li>
+</ul></li>
+<li local-id=3D"ddca5fbe-ef36-4ac2-938f-22741ba2f2d3">
+<p local-id=3D"214741f195b5"><strong>Analisis Sesi</strong> Pada video vali=
+dasi 10=E2=80=9330 menit, sistem menghitung durasi kumulatif setiap perilak=
+u dan menghasilkan persentase fokus (contoh: 78 % fokus dalam 30 menit).</p=
+></li>
+<li local-id=3D"483d41ed-155a-4fa9-9aa0-645ec986346f">
+<p local-id=3D"80e70ff413ee"><strong>Evaluasi Model</strong> Metrik: akuras=
+i =E2=89=A5 85 %, F1-score, precision, recall, dan confusion matrix. Valida=
+si menggunakan <strong>cross-subject testing</strong> (model dilatih pada s=
+ebagian siswa, diuji pada siswa baru).</p></li>
+</ol>
+<p local-id=3D"d3b20f42a671">Seluruh arsitektur bersifat <strong>pose-based=
+</strong> dan tidak memerlukan pelatihan ulang model besar, sehingga sangat=
+ sesuai dengan keterbatasan resource perangkat Anda.</p>
+<h3 local-id=3D"8676a54308ef" id=3D"A--Overview-6.HasilPenelitianyangDihara=
+pkan(Kesimpulan)">6. Hasil Penelitian yang Diharapkan (Kesimpulan)</h3>
+<p local-id=3D"4194a9a13b1a">Penelitian ini diharapkan menghasilkan model d=
+eteksi tingkat fokus siswa dengan akurasi minimal 85 % dan F1-score yang se=
+imbang pada kedua kelas. Sistem mampu menghitung persentase fokus per sesi =
+30 menit secara otomatis, sehingga memberikan indikator objektif yang dapat=
+ diintegrasikan dengan dashboard sederhana. Hasil ini menunjukkan bahwa pen=
+dekatan pose estimation berbasis MediaPipe efektif untuk lingkungan belajar=
+ terkendali dan menjadi dasar pengembangan sistem pemantauan pembelajaran y=
+ang lebih luas di masa depan.</p>
+    </div>
+</body>
+</html>
+------=_Part_4_378747992.1774492917270--
