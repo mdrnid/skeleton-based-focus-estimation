@@ -1,11 +1,11 @@
 # Large data files
-data/raw/
-data/processed/*.mp4
-data/processed/*.webm
-data/extractions/dataset_full_backup_*.csv
+**/data/raw/
+**/data/processed/**/*.mp4
+**/data/processed/**/*.webm
+**/data/extractions/dataset_full_backup_*.csv
 
 # Python
-__pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 .venv/
@@ -14,15 +14,13 @@ venv/
 ENV/
 
 # Jupyter Notebook checkpoints
-.ipynb_checkpoints
+**/.ipynb_checkpoints
 
 # IDEs
 .vscode/
 .idea/
 
-# Models (Keep standard models, ignore trained checkpoints if they are large)
-# models/*.keras
-# models/*.h5
+# Models
 !models/pose_landmarker_lite.task
 
 # Scratch files
