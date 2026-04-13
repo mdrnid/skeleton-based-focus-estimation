@@ -3,6 +3,7 @@ import numpy as np
 import os
 from pathlib import Path
 from sklearn.preprocessing import LabelEncoder
+from src.features.augmentation import apply_jitter, apply_scaling, apply_horizontal_flip
 
 def resample_sequence(frames_features, target_length):
     """
@@ -92,7 +93,30 @@ def preprocess_pose_csv(input_csv, output_dir, sequence_length=10, min_frames=3)
         # Mengubah durasi video apa pun menjadi tepat sequence_length frame
         frames_resampled = resample_sequence(frames_features, sequence_length)
             
+        # --- AUGMENTATION LOOP ---
+        # 1. Original
         processed_data.append(frames_resampled)
+        labels.append(label)
+
+        # 2. Jittering
+        processed_data.append(apply_jitter(frames_resampled, sigma=0.003))
+        labels.append(label)
+
+        # 3. Scaling
+        processed_data.append(apply_scaling(frames_resampled, scale_range=(0.98, 1.02)))
+        labels.append(label)
+
+        # 4. Flip (Horizontal)
+        flipped = apply_horizontal_flip(frames_resampled)
+        processed_data.append(flipped)
+        labels.append(label)
+
+        # 5. Flip + Jitter
+        processed_data.append(apply_jitter(flipped, sigma=0.003))
+        labels.append(label)
+
+        # 6. Flip + Scaling
+        processed_data.append(apply_scaling(flipped, scale_range=(0.98, 1.02)))
         labels.append(label)
 
     # 4. Save to Numpy
