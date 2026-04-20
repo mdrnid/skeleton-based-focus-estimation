@@ -4,11 +4,12 @@ import os
 import sys
 from pathlib import Path
 
-# Pastikan project root ada di sys.path agar import src.* bisa berjalan
+# Pastikan project root ada di sys.path agar import src.* bisa berjalan (PINDAH KE ATAS)
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
+# Sekarang baru import dari src
 from src.features.augmentation import apply_jitter, apply_scaling, apply_horizontal_flip
 
 # ============================================================
