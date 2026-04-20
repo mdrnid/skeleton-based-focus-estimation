@@ -9,7 +9,7 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 import json
 
-def extract_pose_landmarks(dataset_path, output_csv):
+def extract_pose_landmarks(dataset_path, output_csv, stride=1):
     dataset_dir = Path(dataset_path)
     video_files = list(dataset_dir.rglob('*.mp4'))
 
@@ -59,7 +59,11 @@ def extract_pose_landmarks(dataset_path, output_csv):
             if not ret:
                 break
 
-            frame_num += 1
+            # Skip frame jika stride > 1
+            if frame_num % stride != 0:
+                frame_num += 1
+                continue
+            
             # Frame sudah dalam format RGB dari preprocessing
             image_rgb = frame
 
@@ -97,10 +101,11 @@ def extract_pose_landmarks(dataset_path, output_csv):
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
-        print("Usage: python extract_pose.py <dataset_path> <output_csv>", flush=True)
+        print("Usage: python extract_pose.py <dataset_path> <output_csv> [stride]", flush=True)
         sys.exit(1)
 
     dataset_path = sys.argv[1]
     output_csv = sys.argv[2]
+    stride = int(sys.argv[3]) if len(sys.argv) > 3 else 1
 
-    extract_pose_landmarks(dataset_path, output_csv)
+    extract_pose_landmarks(dataset_path, output_csv, stride=stride)

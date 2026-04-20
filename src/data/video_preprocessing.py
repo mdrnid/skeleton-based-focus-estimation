@@ -208,8 +208,8 @@ if __name__ == "__main__":
     process_dataset(
         input_dir=DATASET_DIR, 
         output_dir=OUTPUT_DIR, 
-        target_fps=15,           # Optimal untuk analisis perilaku perlahan
+        target_fps=10,           # Mengurangi beban (sebelumnya 15)
         target_height=480,       # Resolution terbaik vs trade-off memori komputer
-        is_training=False        # Fokus saja dulu untuk preprocessing dasarnya
+        is_training=True         # Nyalakan training mode untuk augmentasi jika perlu
     )
     print("Proses Selesai!")

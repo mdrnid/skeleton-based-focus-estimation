@@ -2,7 +2,8 @@
 **/data/raw/
 **/data/processed/**/*.mp4
 **/data/processed/**/*.webm
-**/data/extractions/dataset_full_backup_*.csv
+**/data/processed/*.npy
+**/data/extractions/*.csv
 
 # Python
 **/__pycache__/
@@ -25,7 +26,11 @@ ENV/
 
 # Models
 models/pose_landmarker_lite.task
+models/pose_model_best_v2.keras
 models/pose_model_best_97acc.keras
+
+# Logs
+*.log
 
 # Scratch files
 scratch/
