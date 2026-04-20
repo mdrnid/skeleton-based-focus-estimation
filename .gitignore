@@ -23,9 +23,9 @@ ENV/
 .vscode/
 .idea/
 
-# Modelss
-!models/pose_landmarker_lite.task
-!models/pose_model_best_97acc.keras
+# Models
+models/pose_landmarker_lite.task
+models/pose_model_best_97acc.keras
 
 # Scratch files
 scratch/
