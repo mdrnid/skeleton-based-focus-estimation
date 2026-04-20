@@ -13,6 +13,30 @@ import numpy as np
 SEQUENCE_LENGTH = 20
 N_LANDMARKS     = 17
 TOTAL_FEATURES  = 70   # 17*4 (raw) + 2 (engineered)
+NUM_CLASSES     = 6
+
+# Label mapping (identik dengan preprocess_csv.py)
+SUBCLASS_NAMES = {
+    0: "Melihat Layar",
+    1: "Membaca Materi",
+    2: "Menulis",
+    3: "Menggunakan Ponsel",
+    4: "Menoleh",
+    5: "Tidur",
+}
+
+SUBCLASS_TO_PARENT = {
+    0: "FOKUS",
+    1: "FOKUS",
+    2: "FOKUS",
+    3: "TIDAK FOKUS",
+    4: "TIDAK FOKUS",
+    5: "TIDAK FOKUS",
+}
+
+# Kelas 0,1,2 = fokus ; 3,4,5 = tidak fokus
+FOKUS_CLASSES     = {0, 1, 2}
+TIDAK_FOKUS_CLASSES = {3, 4, 5}
 
 
 def normalize_frame(coords_reshaped):
@@ -100,8 +124,38 @@ def prepare_model_input(landmarks_buffer):
         landmarks_buffer: List of 68-element lists (raw MediaPipe normalized coords).
 
     Returns:
-        np.ndarray shape (1, SEQUENCE_LENGTH, TOTAL_FEATURES)  — siap masuk model.
+        np.ndarray shape (1, SEQUENCE_LENGTH, TOTAL_FEATURES)  -- siap masuk model.
     """
     normalized = normalize_landmarks_buffer(landmarks_buffer)
     resampled  = resample_sequence(normalized, SEQUENCE_LENGTH)
     return resampled.reshape(1, SEQUENCE_LENGTH, TOTAL_FEATURES)
+
+
+def decode_prediction(prediction_probs):
+    """
+    Decode output softmax dari model multi-class.
+
+    Args:
+        prediction_probs: np.ndarray shape (6,) — probabilitas per kelas.
+
+    Returns:
+        dict dengan keys:
+          - class_idx:   int, indeks kelas prediksi
+          - subclass:    str, nama subclass (e.g. "Menoleh")
+          - parent:      str, "FOKUS" atau "TIDAK FOKUS"
+          - confidence:  float, probabilitas kelas tertinggi
+          - is_fokus:    bool
+    """
+    class_idx  = int(np.argmax(prediction_probs))
+    confidence = float(prediction_probs[class_idx])
+    subclass   = SUBCLASS_NAMES[class_idx]
+    parent     = SUBCLASS_TO_PARENT[class_idx]
+    is_fokus   = class_idx in FOKUS_CLASSES
+
+    return {
+        "class_idx":  class_idx,
+        "subclass":   subclass,
+        "parent":     parent,
+        "confidence": confidence,
+        "is_fokus":   is_fokus,
+    }

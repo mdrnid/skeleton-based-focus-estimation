@@ -25,12 +25,13 @@ sys.path.insert(0, str(BASE_DIR))
 # Import shared utils (normalisasi identik dengan training pipeline)
 from src.visualization.inference_utils import (
     prepare_model_input,
+    decode_prediction,
     SEQUENCE_LENGTH,
     TOTAL_FEATURES,
 )
 
 # --- KONFIGURASI ---
-MODEL_PATH     = BASE_DIR / "models" / "pose_model_best.keras"
+MODEL_PATH     = BASE_DIR / "models" / "pose_model_best_v2.keras"
 POSE_TASK_PATH = BASE_DIR / "models" / "pose_landmarker_lite.task"
 BUFFER_SIZE    = 40   # Lebih besar dari SEQUENCE_LENGTH agar resampling smooth
 
@@ -102,6 +103,7 @@ def process_video(input_path, output_path, no_flip=False):
 
     landmarks_buffer   = []
     current_prediction = "Waiting..."
+    subclass_name      = ""
     confidence         = 0.0
     color              = (255, 255, 255)
 
@@ -134,19 +136,25 @@ def process_video(input_path, output_path, no_flip=False):
             # Inference (mulai ketika minimal SEQUENCE_LENGTH frame terkumpul)
             if len(landmarks_buffer) >= SEQUENCE_LENGTH:
                 input_data = prepare_model_input(landmarks_buffer)
-                prediction = model.predict(input_data, verbose=0)[0][0]
-
-                confidence         = prediction if prediction > 0.5 else 1.0 - prediction
-                current_prediction = "FOKUS" if prediction > 0.5 else "TIDAK FOKUS"
-                color              = (0, 255, 0) if prediction > 0.5 else (0, 0, 255)
+                prediction_probs = model.predict(input_data, verbose=0)[0]
+                
+                # Decode multi-class prediction
+                result = decode_prediction(prediction_probs)
+                
+                current_prediction = result["parent"]
+                subclass_name      = result["subclass"]
+                confidence         = result["confidence"]
+                color              = (0, 255, 0) if result["is_fokus"] else (0, 0, 255)
 
         # --- Overlay ---
         cv2.putText(frame, f"Predict: {current_prediction}",
                     (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.0, color, 3)
-        cv2.putText(frame, f"Conf: {confidence:.2f}",
+        cv2.putText(frame, f"Behavior: {subclass_name}",
                     (30, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
+        cv2.putText(frame, f"Conf: {confidence:.2f}",
+                    (30, 130), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
         cv2.putText(frame, f"Buffer: {len(landmarks_buffer)}/{BUFFER_SIZE}",
-                    (30, 125), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200, 200, 200), 1)
+                    (30, 165), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (200, 200, 200), 1)
 
         out.write(frame)
         pbar.update(1)

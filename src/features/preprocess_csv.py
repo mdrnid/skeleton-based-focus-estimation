@@ -118,12 +118,52 @@ def preprocess_pose_csv(input_csv, output_dir,
     df = pd.read_csv(input_csv)
 
     # ---------------------------------------------------------------- #
-    #  1. Label Mapping (1 = fokus, 0 = tidak_fokus)
+    #  1. Label Mapping — 6 Subclass dari video_id
+    #     Behavior diekstrak dari nama file video.
+    #     Menoleh depan/kanan/kiri digabung jadi satu kelas "menoleh".
     # ---------------------------------------------------------------- #
-    print("Mapping labels...")
-    label_map   = {"fokus": 1, "tidak_fokus": 0}
-    df['label_idx'] = df['main_label'].map(label_map).fillna(-1).astype(int)
-    df = df[df['label_idx'] != -1]
+    print("Mapping subclass labels dari video_id...")
+
+    # Daftar behavior yang dikenali (urutan penting untuk matching)
+    BEHAVIOR_KEYWORDS = [
+        "menggunakan_ponsel",   # harus sebelum kata pendek
+        "melihat_layar",
+        "membaca_materi",
+        "menoleh",
+        "menulis",
+        "tidur",
+    ]
+
+    SUBCLASS_MAP = {
+        "melihat_layar":      0,
+        "membaca_materi":     1,
+        "menulis":            2,
+        "menggunakan_ponsel": 3,
+        "menoleh":            4,
+        "tidur":              5,
+    }
+
+    # Parent class lookup (untuk referensi)
+    SUBCLASS_TO_PARENT = {
+        0: "fokus",        # melihat_layar
+        1: "fokus",        # membaca_materi
+        2: "fokus",        # menulis
+        3: "tidak_fokus",  # menggunakan_ponsel
+        4: "tidak_fokus",  # menoleh
+        5: "tidak_fokus",  # tidur
+    }
+
+    def extract_behavior(video_id):
+        """Ekstrak subclass behavior dari nama file video."""
+        vid_lower = video_id.lower()
+        for keyword in BEHAVIOR_KEYWORDS:
+            if keyword in vid_lower:
+                return keyword
+        return None
+
+    df['behavior'] = df['video_id'].apply(extract_behavior)
+    df = df[df['behavior'].notna()]  # Buang baris yang behavior-nya tidak dikenali
+    df['label_idx'] = df['behavior'].map(SUBCLASS_MAP).astype(int)
 
     # ---------------------------------------------------------------- #
     #  2. Kolom landmark
@@ -193,10 +233,13 @@ def preprocess_pose_csv(input_csv, output_dir,
     print(f"\n[OK] Preprocessing Selesai!")
     print(f"   Shape X : {X.shape}  ->  [Sampel, Timesteps={sequence_length}, Fitur={TOTAL_FEATURES}]")
     print(f"   Shape y : {y.shape}")
-    print(f"   Fokus   : {(y == 1).sum()} sampel")
-    print(f"   Tdk Fok : {(y == 0).sum()} sampel")
+    print(f"   Jumlah kelas: {len(SUBCLASS_MAP)}")
+    inv_map = {v: k for k, v in SUBCLASS_MAP.items()}
+    for cls_idx in sorted(inv_map.keys()):
+        count = (y == cls_idx).sum()
+        parent = SUBCLASS_TO_PARENT[cls_idx]
+        print(f"     [{cls_idx}] {inv_map[cls_idx]:25s} ({parent:12s}) : {count} sampel")
     print(f"   Disimpan ke: {output_dir}")
-    print(f"   Label map: {label_map}")
 
 
 if __name__ == "__main__":
