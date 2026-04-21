@@ -30,7 +30,7 @@ from src.visualization.inference_utils import (
 )
 
 # --- KONFIGURASI ---
-MODEL_PATH     = BASE_DIR / "models" / "pose_model_best_v2.keras"
+MODEL_PATH     = BASE_DIR / "models" / "pose_model_best_v3.keras"
 POSE_TASK_PATH = BASE_DIR / "models" / "pose_landmarker_lite.task"
 BUFFER_SIZE    = 40   # Rolling buffer lebih besar dari SEQUENCE_LENGTH
 

@@ -2,8 +2,6 @@
 **/data/raw/
 **/data/processed/**/*.mp4
 **/data/processed/**/*.webm
-**/data/processed/*.npy
-**/data/extractions/*.csv
 
 # Python
 **/__pycache__/
@@ -34,3 +32,7 @@ models/pose_model_best_97acc.keras
 
 # Scratch files
 scratch/
+
+# Data backups and outputs
+data/extractions/*.csv
+data/output_inference/
