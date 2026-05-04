@@ -8,14 +8,14 @@ agar tidak ada inkonsistensi antara training dan inference.
 import numpy as np
 
 # ============================================================
-#  Konstanta (harus sinkron dengan preprocess_csv.py)
+#  Konstanta (harus sinkron dengan preprocess_csv_minimal.py)
 # ============================================================
-SEQUENCE_LENGTH = 20
+SEQUENCE_LENGTH = 45
 N_LANDMARKS     = 17
-TOTAL_FEATURES  = 70   # 17*4 (raw) + 2 (engineered)
+TOTAL_FEATURES  = 68   # HANYA Raw Landmarks (17*4)
 NUM_CLASSES     = 6
 
-# Label mapping (identik dengan preprocess_csv.py)
+# Label mapping
 SUBCLASS_NAMES = {
     0: "Melihat Layar",
     1: "Membaca Materi",
@@ -34,47 +34,23 @@ SUBCLASS_TO_PARENT = {
     5: "TIDAK FOKUS",
 }
 
-# Kelas 0,1,2 = fokus ; 3,4,5 = tidak fokus
 FOKUS_CLASSES     = {0, 1, 2}
 TIDAK_FOKUS_CLASSES = {3, 4, 5}
 
 
 def normalize_frame(coords_reshaped):
     """
-    Normalisasi satu frame landmark (shape: 17x4).
-    IDENTIK dengan normalize_frame() di preprocess_csv.py.
-
-    Pipeline:
-      1. Centering ke Mid-Shoulder (bukan hidung).
-      2. Scaling dengan lebar bahu.
-      3. Feature engineering: ear_ratio dan nose_offset_x.
+    Normalisasi Minimal: Centering di hidung (landmark 0).
+    Sesuai dengan logic di preprocess_csv_minimal.py.
     """
     c = coords_reshaped.copy()   # (17, 4)  [x, y, z, v]
 
-    # --- 1. CENTERING: Mid-Shoulder ---
-    mid_shoulder = (c[11, 0:3] + c[12, 0:3]) / 2.0
-    c[:, 0:3] -= mid_shoulder
+    # --- 1. CENTERING: Hidung (Landmark 0) ---
+    nose_coord = c[0, 0:3]
+    c[:, 0:3] -= nose_coord
 
-    # --- 2. SCALING: lebar bahu ---
-    shoulder_width = np.linalg.norm(c[11, 0:3] - c[12, 0:3])
-    if shoulder_width > 1e-6:
-        c[:, 0:3] /= shoulder_width
-
-    # --- 3. FEATURE ENGINEERING ---
-    nose  = c[0, 0:2]
-    l_ear = c[3, 0:2]
-    r_ear = c[6, 0:2]
-
-    dist_l = np.linalg.norm(nose - l_ear)
-    dist_r = np.linalg.norm(nose - r_ear)
-
-    ear_ratio     = (dist_l / dist_r) if dist_r > 1e-6 else 1.0
-    nose_offset_x = c[0, 0]   # X hidung relatif mid-shoulder
-
-    flat_raw   = c.flatten()                                      # (68,)
-    engineered = np.array([ear_ratio, nose_offset_x], dtype=np.float32)  # (2,)
-
-    return np.concatenate([flat_raw, engineered])                 # (70,)
+    # Tanpa Feature Engineering tambahan (Brutal-free)
+    return c.flatten()                 # (68,)
 
 
 def normalize_landmarks_buffer(landmarks_buffer):
@@ -131,23 +107,35 @@ def prepare_model_input(landmarks_buffer):
     return resampled.reshape(1, SEQUENCE_LENGTH, TOTAL_FEATURES)
 
 
+def softmax(x):
+    """Compute softmax values for each sets of scores in x."""
+    e_x = np.exp(x - np.max(x))
+    return e_x / e_x.sum(axis=0)
+
+
 def decode_prediction(prediction_probs):
     """
-    Decode output softmax dari model multi-class.
+    Decode output (logits/probs) dari model multi-class.
 
     Args:
-        prediction_probs: np.ndarray shape (6,) — probabilitas per kelas.
+        prediction_probs: np.ndarray shape (6,) — output raw dari model.
 
     Returns:
         dict dengan keys:
           - class_idx:   int, indeks kelas prediksi
           - subclass:    str, nama subclass (e.g. "Menoleh")
           - parent:      str, "FOKUS" atau "TIDAK FOKUS"
-          - confidence:  float, probabilitas kelas tertinggi
+          - confidence:  float, probabilitas (0.0 - 1.0)
           - is_fokus:    bool
     """
-    class_idx  = int(np.argmax(prediction_probs))
-    confidence = float(prediction_probs[class_idx])
+    # Jika output adalah logits (ada nilai > 1 atau < 0), terapkan softmax
+    if np.max(prediction_probs) > 1.0 or np.min(prediction_probs) < 0.0:
+        probs = softmax(prediction_probs)
+    else:
+        probs = prediction_probs
+
+    class_idx  = int(np.argmax(probs))
+    confidence = float(probs[class_idx])
     subclass   = SUBCLASS_NAMES[class_idx]
     parent     = SUBCLASS_TO_PARENT[class_idx]
     is_fokus   = class_idx in FOKUS_CLASSES

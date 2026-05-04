@@ -22,10 +22,10 @@ ENV/
 .vscode/
 .idea/
 
-# Models
-models/pose_landmarker_lite.task
-models/pose_model_best_v2.keras
-models/pose_model_best_97acc.keras
+# Models & Tasks
+models/
+*.keras
+*.task
 
 # Logs
 *.log
@@ -33,6 +33,11 @@ models/pose_model_best_97acc.keras
 # Scratch files
 scratch/
 
-# Data backups and outputs
-data/extractions/*.csv
+# Data generated files
+data/raw/
+data/extractions/
+data/processed/
+data/processed_holistic/
 data/output_inference/
+*.npy
+*.csv

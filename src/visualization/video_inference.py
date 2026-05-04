@@ -31,7 +31,11 @@ from src.visualization.inference_utils import (
 )
 
 # --- KONFIGURASI ---
-MODEL_PATH     = BASE_DIR / "models" / "pose_model_best_v2.keras"
+# --- KONFIGURASI DEFAULT ---
+# Prefer v5 (robust) model, fall back to v4 if not yet trained
+_MODEL_V5 = BASE_DIR / "models" / "pose_model_best_v5.keras"
+_MODEL_V4 = BASE_DIR / "models" / "pose_model_best_v4_zip.keras"
+DEFAULT_MODEL_PATH = _MODEL_V5 if _MODEL_V5.exists() else _MODEL_V4
 POSE_TASK_PATH = BASE_DIR / "models" / "pose_landmarker_lite.task"
 BUFFER_SIZE    = 40   # Lebih besar dari SEQUENCE_LENGTH agar resampling smooth
 
@@ -61,18 +65,18 @@ def draw_landmarks(frame, results):
 
 
 # --- MAIN ---
-def process_video(input_path, output_path, no_flip=False):
+def process_video(input_path, output_path, model_path, no_flip=False):
     print(f"=== Video Inference ===")
     print(f"Input  : {input_path}")
     print(f"Output : {output_path}")
-    print(f"Model  : {MODEL_PATH.name}")
+    print(f"Model  : {model_path.name}")
     print(f"Seq Len: {SEQUENCE_LENGTH}, Features: {TOTAL_FEATURES}")
 
     # 1. Load model
-    if not MODEL_PATH.exists():
-        print(f"[ERROR] Model tidak ditemukan: {MODEL_PATH}")
+    if not model_path.exists():
+        print(f"[ERROR] Model tidak ditemukan: {model_path}")
         return
-    model = tf.keras.models.load_model(str(MODEL_PATH))
+    model = tf.keras.models.load_model(str(model_path))
     print("Keras model loaded.")
 
     # 2. Setup MediaPipe
@@ -171,11 +175,19 @@ if __name__ == "__main__":
                         help="Path ke video input")
     parser.add_argument("--output",  type=str, default=None,
                         help="Path untuk menyimpan video output")
+    parser.add_argument("--model",   type=str, default=None,
+                        help="Path ke file model .keras")
     parser.add_argument("--no-flip", action="store_true",
                         help="Nonaktifkan mirror flip (aktif by default)")
     args = parser.parse_args()
 
     input_video  = args.input
     output_video = args.output if args.output else "scratch/inference_latest.mp4"
+    
+    # Pilih model
+    if args.model:
+        model_path = Path(args.model)
+    else:
+        model_path = DEFAULT_MODEL_PATH
 
-    process_video(input_video, output_video, no_flip=args.no_flip)
+    process_video(input_video, output_video, model_path, no_flip=args.no_flip)
